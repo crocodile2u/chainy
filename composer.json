@@ -1,0 +1,11 @@
+{
+  "name": "crocodile2u/chainy",
+  "autoload": {
+    "psr-0" : {
+      "chainy" : "./src"
+    }
+  },
+  "require": {
+    "ext-mbstring": "*"
+  }
+}
