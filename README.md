@@ -17,14 +17,18 @@ sort($array);
 Know what? You could do the same in a more readable and nice way:
 
 ```php
+
 $chain = (new \chainy\Chain)
+
     ->filter()
+
     ->map(
         function($element) {
             // ... manipulations ...
             return $modifiedElement;
         }
     )
+
     ->sort();
 
 $array = $chain->apply($array);
