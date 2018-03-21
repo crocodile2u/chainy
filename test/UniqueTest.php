@@ -3,8 +3,9 @@
 namespace chainy\test;
 
 use chainy\Unique;
+use PHPUnit\Framework\TestCase;
 
-class UniqueTest extends \PHPUnit_Framework_TestCase
+class UniqueTest extends TestCase
 {
     function testInvoke()
     {

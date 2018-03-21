@@ -3,8 +3,9 @@
 namespace chainy\test;
 
 use chainy\Split;
+use PHPUnit\Framework\TestCase;
 
-class SplitTest extends \PHPUnit_Framework_TestCase
+class SplitTest extends TestCase
 {
     function testInvoke()
     {

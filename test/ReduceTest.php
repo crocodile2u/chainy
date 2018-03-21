@@ -3,8 +3,9 @@
 namespace chainy\test;
 
 use chainy\Reduce;
+use PHPUnit\Framework\TestCase;
 
-class ReduceTest extends \PHPUnit_Framework_TestCase
+class ReduceTest extends TestCase
 {
     /**
      * @dataProvider provider_testInvoke

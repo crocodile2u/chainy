@@ -3,8 +3,9 @@
 namespace chainy\test;
 
 use chainy\Xargs;
+use PHPUnit\Framework\TestCase;
 
-class XargsTest extends \PHPUnit_Framework_TestCase
+class XargsTest extends TestCase
 {
     function testInvoke()
     {

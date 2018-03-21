@@ -3,8 +3,9 @@
 namespace chainy\test;
 
 use chainy\Ucfirst;
+use PHPUnit\Framework\TestCase;
 
-class UcfirstTest extends \PHPUnit_Framework_TestCase
+class UcfirstTest extends TestCase
 {
     /**
      * @param $input

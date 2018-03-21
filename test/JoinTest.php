@@ -3,8 +3,9 @@
 namespace chainy\test;
 
 use chainy\Join;
+use PHPUnit\Framework\TestCase;
 
-class JoinTest extends \PHPUnit_Framework_TestCase
+class JoinTest extends TestCase
 {
     function testInvoke()
     {

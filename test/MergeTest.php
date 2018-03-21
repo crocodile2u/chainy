@@ -3,8 +3,9 @@
 namespace chainy\test;
 
 use chainy\Merge;
+use PHPUnit\Framework\TestCase;
 
-class MergeTest extends \PHPUnit_Framework_TestCase
+class MergeTest extends TestCase
 {
     function testCallbackIsCalledOnEveryElementWithCorrectArgs()
     {

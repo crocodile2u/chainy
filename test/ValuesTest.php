@@ -3,8 +3,9 @@
 namespace chainy\test;
 
 use chainy\Values;
+use PHPUnit\Framework\TestCase;
 
-class ValuesTest extends \PHPUnit_Framework_TestCase
+class ValuesTest extends TestCase
 {
     function testInvoke()
     {

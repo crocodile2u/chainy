@@ -3,8 +3,9 @@
 namespace chainy\test;
 
 use chainy\Filter;
+use PHPUnit\Framework\TestCase;
 
-class FilterTest extends \PHPUnit_Framework_TestCase
+class FilterTest extends TestCase
 {
     function testDefaultFiltering()
     {

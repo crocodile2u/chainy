@@ -3,8 +3,9 @@
 namespace chainy\test;
 
 use chainy\Reverse;
+use PHPUnit\Framework\TestCase;
 
-class ReverseTest extends \PHPUnit_Framework_TestCase
+class ReverseTest extends TestCase
 {
     function testInvoke()
     {

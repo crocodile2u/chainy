@@ -3,8 +3,9 @@
 namespace chainy\test;
 
 use chainy\Keys;
+use PHPUnit\Framework\TestCase;
 
-class KeysTest extends \PHPUnit_Framework_TestCase
+class KeysTest extends TestCase
 {
     function testInvoke()
     {

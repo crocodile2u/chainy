@@ -3,8 +3,9 @@
 namespace chainy\test;
 
 use chainy\StripHigh;
+use PHPUnit\Framework\TestCase;
 
-class StripHighTest extends \PHPUnit_Framework_TestCase
+class StripHighTest extends TestCase
 {
     /**
      * @param $input

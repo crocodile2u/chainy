@@ -3,8 +3,9 @@
 namespace chainy\test;
 
 use chainy\Map;
+use PHPUnit\Framework\TestCase;
 
-class MapTest extends \PHPUnit_Framework_TestCase
+class MapTest extends TestCase
 {
     function testInvoke()
     {

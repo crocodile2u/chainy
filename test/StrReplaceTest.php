@@ -3,8 +3,9 @@
 namespace chainy\test;
 
 use chainy\StrReplace;
+use PHPUnit\Framework\TestCase;
 
-class StrReplaceTest extends \PHPUnit_Framework_TestCase
+class StrReplaceTest extends TestCase
 {
     /**
      * @param $str

@@ -3,8 +3,9 @@
 namespace chainy\test;
 
 use chainy\CombineWithKeys;
+use PHPUnit\Framework\TestCase;
 
-class CombineWithKeysTest extends \PHPUnit_Framework_TestCase
+class CombineWithKeysTest extends TestCase
 {
     function testInvoke()
     {

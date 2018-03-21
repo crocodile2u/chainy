@@ -3,8 +3,9 @@
 namespace chainy\test;
 
 use chainy\Usort;
+use PHPUnit\Framework\TestCase;
 
-class UsortTest extends \PHPUnit_Framework_TestCase
+class UsortTest extends TestCase
 {
     function testInvoke()
     {

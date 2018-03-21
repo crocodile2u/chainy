@@ -3,8 +3,9 @@
 namespace chainy\test;
 
 use chainy\Rtrim;
+use PHPUnit\Framework\TestCase;
 
-class RtrimTest extends \PHPUnit_Framework_TestCase
+class RtrimTest extends TestCase
 {
     /**
      * @param $str
