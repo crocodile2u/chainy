@@ -3,8 +3,9 @@
 namespace chainy\test;
 
 use chainy\Ksort;
+use PHPUnit\Framework\TestCase;
 
-class KsortTest extends \PHPUnit_Framework_TestCase
+class KsortTest extends TestCase
 {
     function testInvoke()
     {

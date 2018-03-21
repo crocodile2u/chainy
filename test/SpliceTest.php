@@ -3,8 +3,9 @@
 namespace chainy\test;
 
 use chainy\Splice;
+use PHPUnit\Framework\TestCase;
 
-class SpliceTest extends \PHPUnit_Framework_TestCase
+class SpliceTest extends TestCase
 {
     function testNoReplacement()
     {

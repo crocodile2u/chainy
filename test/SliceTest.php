@@ -3,8 +3,9 @@
 namespace chainy\test;
 
 use chainy\Slice;
+use PHPUnit\Framework\TestCase;
 
-class SliceTest extends \PHPUnit_Framework_TestCase
+class SliceTest extends TestCase
 {
     function testInvoke()
     {

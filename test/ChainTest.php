@@ -3,8 +3,9 @@
 namespace chainy\test;
 
 use chainy\Chain;
+use PHPUnit\Framework\TestCase;
 
-class ChainTest extends \PHPUnit_Framework_TestCase
+class ChainTest extends TestCase
 {
     function testApplyCallsAllFiltersAndReturnsTheLastResult()
     {

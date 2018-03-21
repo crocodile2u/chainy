@@ -3,8 +3,9 @@
 namespace chainy\test;
 
 use chainy\Capitalize;
+use PHPUnit\Framework\TestCase;
 
-class CapitalizeTest extends \PHPUnit_Framework_TestCase
+class CapitalizeTest extends TestCase
 {
     /**
      * @param $input

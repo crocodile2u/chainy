@@ -3,8 +3,9 @@
 namespace chainy\test;
 
 use chainy\Substr;
+use PHPUnit\Framework\TestCase;
 
-class SubstrTest extends \PHPUnit_Framework_TestCase
+class SubstrTest extends TestCase
 {
     /**
      * @param $str

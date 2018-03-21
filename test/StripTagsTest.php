@@ -3,8 +3,9 @@
 namespace chainy\test;
 
 use chainy\StripTags;
+use PHPUnit\Framework\TestCase;
 
-class StripTagsTest extends \PHPUnit_Framework_TestCase
+class StripTagsTest extends TestCase
 {
     /**
      * @param $input

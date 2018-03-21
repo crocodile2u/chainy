@@ -3,8 +3,9 @@
 namespace chainy\test;
 
 use chainy\Each;
+use PHPUnit\Framework\TestCase;
 
-class EachTest extends \PHPUnit_Framework_TestCase
+class EachTest extends TestCase
 {
     function testCallbackIsCalledOnEveryElementWithCorrectArgs()
     {

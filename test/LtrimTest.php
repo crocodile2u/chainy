@@ -3,8 +3,9 @@
 namespace chainy\test;
 
 use chainy\Ltrim;
+use PHPUnit\Framework\TestCase;
 
-class LtrimTest extends \PHPUnit_Framework_TestCase
+class LtrimTest extends TestCase
 {
     /**
      * @param $str

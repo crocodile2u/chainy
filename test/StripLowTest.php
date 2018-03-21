@@ -3,8 +3,9 @@
 namespace chainy\test;
 
 use chainy\StripLow;
+use PHPUnit\Framework\TestCase;
 
-class StripLowTest extends \PHPUnit_Framework_TestCase
+class StripLowTest extends TestCase
 {
     /**
      * @param $input

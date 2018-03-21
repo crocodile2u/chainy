@@ -3,8 +3,9 @@
 namespace chainy\test;
 
 use chainy\UpperCase;
+use PHPUnit\Framework\TestCase;
 
-class UpperCaseTest extends \PHPUnit_Framework_TestCase
+class UpperCaseTest extends TestCase
 {
     /**
      * @param $input
