@@ -14,4 +14,12 @@ class XargsTest extends TestCase
         };
         $this->assertEquals("hello world", (new Xargs($f))(["hello", " ", "world"]));
     }
+
+    function testInvokeOnNullArg()
+    {
+        $f = function ($arg1) {
+            return null;
+        };
+        $this->assertNull((new Xargs($f))(null));
+    }
 }
