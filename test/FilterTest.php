@@ -39,7 +39,7 @@ class FilterTest extends TestCase
         $f = function($k) {
             return $k === "c";
         };
-        $this->assertEquals(["c" => 3], (new Filter($f))($this->array));
+        $this->assertEquals(["c" => 3], (new Filter($f, ARRAY_FILTER_USE_KEY))($this->array));
     }
 
     function testBothFlagFiltering()
@@ -47,6 +47,6 @@ class FilterTest extends TestCase
         $f = function($v, $k) {
             return $v === 4 or $k === "b";
         };
-        $this->assertEquals(["b" => 2, "d" => 4], (new Filter($f))($this->array));
+        $this->assertEquals(["b" => 2, "d" => 4], (new Filter($f, ARRAY_FILTER_USE_BOTH))($this->array));
     }
 }
