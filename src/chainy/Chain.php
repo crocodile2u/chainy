@@ -10,16 +10,17 @@ class Chain
     private $links = [];
     /**
      * @param callable $link
-     * @return $this
+     * @return self
      */
     function add(callable $link)
     {
-        $this->links[] = $link;
-        return $this;
+        $retval = clone $this;
+        $retval->links[] = $link;
+        return $retval;
     }
     /**
      * @param callable $callback
-     * @return $this
+     * @return self
      */
     function map(callable $callback)
     {
@@ -50,7 +51,7 @@ class Chain
      * @param int $offset
      * @param int $length
      * @param bool $preserveKeys
-     * @return $this
+     * @return self
      */
     function slice($offset, $length = null, $preserveKeys = null)
     {
@@ -61,7 +62,7 @@ class Chain
      * @param int $offset
      * @param int $length
      * @param array $replacement
-     * @return $this
+     * @return self
      */
     function splice($offset, $length = null, $replacement = null)
     {
@@ -70,7 +71,7 @@ class Chain
 
     /**
      * @param callable $callback
-     * @return $this
+     * @return self
      */
     function each(callable $callback)
     {
@@ -79,7 +80,7 @@ class Chain
 
     /**
      * @param \array[] ...$args
-     * @return $this
+     * @return self
      */
     function merge(array ...$args)
     {
@@ -88,7 +89,7 @@ class Chain
 
     /**
      * @param array $keys
-     * @return $this
+     * @return self
      */
     function combineWithKeys(array $keys)
     {
@@ -97,7 +98,7 @@ class Chain
 
     /**
      * @param array $values
-     * @return $this
+     * @return self
      */
     function combineWithValues(array $values)
     {
@@ -106,7 +107,7 @@ class Chain
 
     /**
      * @param string $delimiter
-     * @return $this
+     * @return self
      */
     function split(string $delimiter)
     {
@@ -115,7 +116,7 @@ class Chain
 
     /**
      * @param string $glue
-     * @return $this
+     * @return self
      */
     function join(string $glue = "")
     {
@@ -124,7 +125,7 @@ class Chain
 
     /**
      * @param string $chars
-     * @return $this
+     * @return self
      */
     function trim($chars = null)
     {
@@ -133,7 +134,7 @@ class Chain
 
     /**
      * @param string $chars
-     * @return $this
+     * @return self
      */
     function ltrim($chars = null)
     {
@@ -142,7 +143,7 @@ class Chain
 
     /**
      * @param string $chars
-     * @return $this
+     * @return self
      */
     function rtrim($chars = null)
     {
@@ -151,7 +152,7 @@ class Chain
 
     /**
      * @param string $allowed
-     * @return $this
+     * @return self
      */
     function stripTags($allowed = null)
     {
@@ -159,7 +160,7 @@ class Chain
     }
 
     /**
-     * @return $this
+     * @return self
      */
     function stripLow()
     {
@@ -167,7 +168,7 @@ class Chain
     }
 
     /**
-     * @return $this
+     * @return self
      */
     function stripHigh()
     {
@@ -177,7 +178,7 @@ class Chain
     /**
      * @param $search
      * @param $replacement
-     * @return $this
+     * @return self
      */
     function strReplace($search, $replacement)
     {
@@ -185,7 +186,7 @@ class Chain
     }
 
     /**
-     * @return $this
+     * @return self
      */
     function toLowerCase()
     {
@@ -193,7 +194,7 @@ class Chain
     }
 
     /**
-     * @return $this
+     * @return self
      */
     function toUpperCase()
     {
@@ -201,7 +202,7 @@ class Chain
     }
 
     /**
-     * @return $this
+     * @return self
      */
     function capitalize()
     {
@@ -209,7 +210,7 @@ class Chain
     }
 
     /**
-     * @return $this
+     * @return self
      */
     function ucfirst()
     {

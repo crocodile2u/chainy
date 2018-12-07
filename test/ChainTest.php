@@ -27,4 +27,12 @@ class ChainTest extends TestCase
         $this->assertTrue($f1Called);
         $this->assertTrue($f2Called);
     }
+
+    public function testImmutability()
+    {
+        $chain1 = new Chain();
+        $chain2 = $chain1->add(function(){});
+        $this->assertEquals(get_class($chain1), get_class($chain2));
+        $this->assertNotSame($chain1, $chain2);
+    }
 }
