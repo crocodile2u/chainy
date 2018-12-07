@@ -19,4 +19,34 @@ class FilterTest extends TestCase
         };
         $this->assertEquals([10, 20], (new Filter($f))([10, 20, 0, -1, 1]));
     }
+
+    /**
+     * Array for testing flag filter
+     * @var array
+     */
+    protected $array = ["a" => 1, "b" => 2, "c" => 3, "d" => 4];
+
+    function testDefaultFlagFiltering()
+    {
+        $f = function($v) {
+            return $v === 1;
+        };
+        $this->assertEquals(["a" => 1], (new Filter($f))($this->array));
+    }
+
+    function testKeyFlagFiltering()
+    {
+        $f = function($k) {
+            return $k === "c";
+        };
+        $this->assertEquals(["c" => 3], (new Filter($f, ARRAY_FILTER_USE_KEY))($this->array));
+    }
+
+    function testBothFlagFiltering()
+    {
+        $f = function($v, $k) {
+            return $v === 4 or $k === "b";
+        };
+        $this->assertEquals(["b" => 2, "d" => 4], (new Filter($f, ARRAY_FILTER_USE_BOTH))($this->array));
+    }
 }

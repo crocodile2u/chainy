@@ -38,12 +38,12 @@ class Chain
 
     /**
      * @param callable $callback
-     * @param mixed $initial
+     * @param integer $flag
      * @return mixed
      */
-    function filter(callable $callback = null)
+    function filter(callable $callback = null, $flag = Filter::FLAG_DEFAULT)
     {
-        return $this->add(new Filter($callback));
+        return $this->add(new Filter($callback, $flag));
     }
 
     /**
