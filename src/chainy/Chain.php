@@ -17,23 +17,28 @@ class Chain
         $this->links[] = $link;
         return $this;
     }
+
     /**
      * @param callable $callback
-     * @return $this
+     * @param bool $keys whether to pass the input array keys to the callback
+     * @return self
      */
-    function map(callable $callback)
+    function map(callable $callback, bool $keys = false)
     {
-        return $this->add(new Map($callback));
+        $link = $keys ? new MapKeyValue($callback) : new Map($callback);
+        return $this->add($link);
     }
 
     /**
      * @param callable $callback
      * @param mixed $initial
+     * @param bool $keys whether to pass the input array keys to the callback
      * @return mixed
      */
-    function reduce(callable $callback, $initial = null)
+    function reduce(callable $callback, $initial = null, bool $keys = false)
     {
-        return $this->add(new Reduce($callback, $initial));
+        $link = $keys ? new ReduceKeyValue($callback, $initial) : new Map($callback, $initial);
+        return $this->add($link);
     }
 
     /**
